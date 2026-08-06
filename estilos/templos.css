@@ -1,0 +1,132 @@
+:root {
+  --cor-texto-geral: #bfbfbf;
+  --cor-fundo-geral: #191a1b;
+
+  --cor-texto-destaque: #cab964;
+  --cor-fundo-destaque: #121314;
+
+  --cor-texto-primario: #81c0a7;
+  --cor-texto-alerta: #ff6141;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--cor-texto-geral);
+  background-color: var(--cor-fundo-geral);
+  font-family: "Anonymous Pro", monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  color: var(--cor-texto-destaque);
+  background-color: var(--cor-fundo-destaque);
+}
+
+header h1 {
+  width: auto;
+  padding: 10px;
+}
+
+header h1.expandir {
+  display: none;
+  width: 0;
+}
+
+header nav {
+  width: 0;
+  text-align: center;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  display: none;
+  padding: 10px;
+  font-size: large;
+  text-decoration: none;
+  color: var(--cor-texto-destaque);
+}
+
+header nav ul li a:hover {
+  font-weight: bold;
+  color: var(--cor-texto-primario);
+}
+
+header nav.expandir {
+  display: flex;
+  width: 100%;
+}
+
+header nav.expandir ul li a {
+  display: block;
+}
+
+header button {
+  background: none;
+  border: 0;
+  color: var(--cor-texto-destaque);
+  font-size: x-large;
+  padding: 10px;
+  position: absolute;
+  right: 10px;
+}
+
+header button::before {
+  content: "☰";
+}
+
+header button.expandir::before {
+  content: "X";
+  color: var(--cor-texto-alerta);
+}
+
+header button.expandir {
+  align-self: flex-start;
+}
+
+main {
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  width: 650px;
+}
+
+main section {
+  display: grid;
+  justify-self: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  place-items: center;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  color: var(--cor-texto-destaque);
+  background-color: var(--cor-fundo-destaque);
+}
+
+footer p {
+  padding: 3px;
+}
+
+footer #modificacao {
+  color: var(--cor-texto-primario);
+  font-size: smaller;
+}

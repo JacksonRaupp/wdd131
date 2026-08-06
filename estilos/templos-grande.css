@@ -1,0 +1,32 @@
+@media (min-width: 50rem) {
+  header h1 {
+    width: auto;
+    text-wrap: nowrap;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav ul {
+    flex-flow: row;
+  }
+
+  header nav ul li a {
+    display: block;
+  }
+
+  header button {
+    display: none;
+  }
+
+  main section {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 80rem) {
+  main section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

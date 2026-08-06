@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Avaliação de Produto</title>
+    <meta name="author" content="Jackson Raupp" />
+    <meta
+      name="description"
+      content="S05 — Tarefa: Formulário de Avaliação de Produto"
+    />
+
+    <link rel="stylesheet" href="estilos/formulario.css" />
+
+    <script src="scripts/formulario.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <br />
+
+      <h1>Avaliação de Produto</h1>
+
+      <br />
+      <hr />
+    </header>
+
+    <main>
+      <br />
+
+      <form method="get" action="avaliacao.html" id="form-avaliacao">
+        <fieldset>
+          <br />
+
+          <div id="seletor-produtos">
+            <label for="produto">
+              <p>Nome do Produto<span class="obrigatorio">*</span></p>
+
+              <select name="produto" id="produto" required>
+                <option value="" disabled selected>
+                  <p>Selecione um produto...</p>
+                </option>
+              </select>
+            </label>
+          </div>
+
+          <br /><br />
+
+          <div id="classificacao">
+            <p>Classificação Geral<span class="obrigatorio">*</span></p>
+
+            <div id="estrelas">
+              <label for="estrela-a"></label>
+              <input
+                type="radio"
+                name="estrelas"
+                id="estrela-a"
+                value="5"
+                aria-label="5 estrelas"
+                required
+              />
+
+              <label for="estrela-b"></label>
+              <input
+                type="radio"
+                name="estrelas"
+                id="estrela-b"
+                value="4"
+                aria-label="4 estrelas"
+                required
+              />
+
+              <label for="estrela-c"></label>
+              <input
+                type="radio"
+                name="estrelas"
+                id="estrela-c"
+                value="3"
+                aria-label="3 estrelas"
+                required
+              />
+
+              <label for="estrela-d"></label>
+              <input
+                type="radio"
+                name="estrelas"
+                id="estrela-d"
+                value="2"
+                aria-label="2 estrelas"
+                required
+              />
+
+              <label for="estrela-e"></label>
+              <input
+                type="radio"
+                name="estrelas"
+                id="estrela-e"
+                value="1"
+                aria-label="1 estrela"
+                required
+              />
+            </div>
+          </div>
+
+          <br />
+
+          <div id="entrada-data">
+            <label for="data">
+              <p>Data de Instalação<span class="obrigatorio">*</span></p>
+
+              <input type="date" name="data" id="data" required />
+            </label>
+          </div>
+
+          <br /><br />
+
+          <div id="recursos">
+            <p>Quais recursos você achou úteis no produto?</p>
+            <span class="sugestao">(Marque todos que se aplicam)</span>
+
+            <div>
+              <label
+                ><input
+                  type="checkbox"
+                  name="desempenho"
+                  id="desempenho"
+                  value="desempenho"
+                />
+                <p>Desempenho</p>
+              </label>
+
+              <label
+                ><input
+                  type="checkbox"
+                  name="design"
+                  id="design"
+                  value="design"
+                />
+                <p>Design</p>
+              </label>
+
+              <label
+                ><input
+                  type="checkbox"
+                  name="durabilidade"
+                  id="durabilidade"
+                  value="durabilidade"
+                />
+                <p>Durabilidade</p>
+              </label>
+
+              <label
+                ><input
+                  type="checkbox"
+                  name="facilidade"
+                  id="facilidade"
+                  value="facilidade"
+                />
+                <p>Facilidade de Uso</p>
+              </label>
+            </div>
+          </div>
+
+          <br /><br />
+
+          <div id="entrada-avaliacao">
+            <label for="avaliacao">
+              <p>Avaliação Escrita <span class="sugestao">(Opcional)</span></p>
+
+              <textarea
+                name="avaliacao"
+                id="avaliacao"
+                placeholder="Ex.: O melhor que está tendo..."
+              ></textarea>
+            </label>
+          </div>
+
+          <br /><br />
+
+          <div id="entrada-nome">
+            <label for="nome">
+              <p>Seu Nome <span class="sugestao">(Opcional)</span></p>
+
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="Ex.: John Doe"
+              />
+            </label>
+          </div>
+
+          <br />
+        </fieldset>
+
+        <br />
+
+        <button type="submit">
+          <p>Submeter Minha Avaliação</p>
+        </button>
+      </form>
+
+      <br />
+    </main>
+
+    <footer>
+      <hr />
+      <br />
+
+      <p>&COPY;<span id="anoAtual"></span> · Jackson Raupp</p>
+
+      <p>Última modificação: <span id="ultimaModificacao"></span></p>
+
+      <br />
+    </footer>
+  </body>
+</html>

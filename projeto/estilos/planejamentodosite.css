@@ -1,0 +1,80 @@
+:root {
+  --cor-fundo-padrao: #1e1e1e;
+  --cor-fundo-extremidades: #252526;
+
+  --cor-texto-padrao: #d4d4d4;
+  --cor-texto-destaque: #569cd6;
+
+  --cor-texto-marca: #4ec9b0;
+
+  --borda-padrão: 0.2em solid #555;
+
+  --texto-padrao: "Roboto", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--texto-padrao);
+  text-align: center;
+  justify-items: center;
+  font-weight: 400;
+  font-size: large;
+  background-color: var(--cor-fundo-padrao);
+  color: var(--cor-texto-padrao);
+}
+
+header,
+main,
+footer {
+  width: 50vw;
+  background-color: var(--cor-fundo-extremidades);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--cor-texto-destaque);
+}
+
+main p,
+main li {
+  margin: 0 5em;
+  text-indent: 2em;
+  list-style: none;
+  text-align: justify;
+  padding: 3px;
+}
+
+main .marca {
+  color: var(--cor-texto-marca);
+  font-weight: bold;
+}
+
+main .cor-amostra {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  border: var(--borda-padrão);
+  margin: 10px;
+}
+
+main #cores li {
+  display: flex;
+}
+
+main #cores li p {
+  margin: 0;
+  align-self: center;
+}
+
+main #wireframe img{
+    width: 90%;
+    padding: 3px;
+}

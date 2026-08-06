@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Página do País</title>
+    <meta name="author" content="Jackson Raupp" />
+    <meta
+      name="description"
+      content="S03 - Tarefa: Página do País => Foi usado como base para essa tarefa o Brasil"
+    />
+
+    <link rel="stylesheet" href="estilos/local.css" />
+    <link rel="stylesheet" href="estilos/local-grande.css" />
+
+    <script src="scripts/local.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Brasil</h1>
+    </header>
+
+    <main>
+      <picture>
+        <source
+          srcset="imagens/mico-leao-dourado-1280.webp"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="imagens/mico-leao-dourado-640.webp"
+          media="(min-width: 640px)"
+        />
+        <source
+          srcset="imagens/mico-leao-dourado-320.webp"
+          media="(min-width: 320px)"
+          width="320"
+          height="180"
+        />
+        <img
+          src="imagens/mico-leao-dourado.webp"
+          alt="Mico Leão Dourado"
+          width="320"
+          height="180"
+        />
+      </picture>
+
+      <aside id="dados">
+        <h2>Dados</h2>
+
+        <br />
+
+        <dl>
+          <dt>Área:</dt>
+          <dd>8.515.767 km²</dd>
+
+          <dt>População:</dt>
+          <dd>212.583.750</dd>
+
+          <dt>Capital:</dt>
+          <dd>Brasília</dd>
+
+          <dt>Idioma:</dt>
+          <dd>Português</dd>
+
+          <dt>Moeda:</dt>
+          <dd>Real brasileiro (BRL)</dd>
+
+          <dt>Fuso horário:</dt>
+          <dd>UTC−02 a UTC−05</dd>
+
+          <dt>Código de discagem:</dt>
+          <dd>+55</dd>
+
+          <dt>TLD de internet:</dt>
+          <dd>.br</dd>
+        </dl>
+      </aside>
+
+      <aside id="clima">
+        <h2>Clima</h2>
+
+        <img src="imagens/dia-ensolarado.svg" alt="" width="32" />
+
+        <dl>
+          <dt>Temperatura:</dt>
+          <dd><span id="temperatura"></span></dd>
+
+          <dt>Condições:</dt>
+          <dd>Ensolarado</dd>
+
+          <dt>Vento:</dt>
+          <dd><span id="vento"></span></dd>
+
+          <dt>Sensação térmica:</dt>
+          <dd><span id="sensacaoTermica"></span></dd>
+        </dl>
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy;<span id="anoatual"></span> · Jackson Raupp · Brasil</p>
+
+      <p>Última modificação: <span id="ultimaModificacao"></span></p>
+    </footer>
+  </body>
+</html>

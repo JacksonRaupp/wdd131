@@ -1,0 +1,33 @@
+@media (min-width: 60em) {
+  main aside {
+    position: absolute;
+    background-color: #191a1bc4;
+  }
+
+  main aside#dados {
+    top: calc(1vh + 1vw);
+    left: 1em;
+  }
+
+  main aside#clima {
+    right: 1em;
+    top: calc(1vw + 40vh);
+  }
+
+  main aside#clima img {
+    display: none;
+  }
+
+  main aside#clima h2::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+
+    background-image: url("../imagens/dia-ensolarado.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

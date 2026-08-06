@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ---------- Principal ---------- */
+  --cor-fundo-padrao: #202121;
+  --cor-texto-padrao: #bbbebf;
+  --borda-padrao: 1px solid #dddddd5c;
+  --raio-borda-padrao: 6px;
+
+  /* ---------- Destaque ---------- */
+  --cor-fundo-destaque: #121314;
+  --cor-texto-destaque: #8cdcfe;
+  --cor-entrada-destaque: #d7aa4a;
+
+  /* ---------- Classificação Geral ---------- */
+  --estrela-padrao: "☆";
+  --estrela-destaque: "★";
+
+  /* ---------- Botão ---------- */
+  --gradiente-botão: linear-gradient(#8cdcfe, #248bdb);
+  --sombra-texto-botão: 0 0 10px #808080;
+}
+
+/* ---------- Estrutura Geral ---------- */
+body {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 400;
+
+  color-scheme: dark;
+  background-color: var(--cor-fundo-padrao);
+  color: var(--cor-texto-padrao);
+}
+
+header,
+footer {
+  text-align: center;
+  color: var(--cor-texto-destaque);
+}
+
+main {
+  max-width: 500px;
+  justify-self: center;
+}
+
+hr {
+  border-color: var(--cor-fundo-destaque);
+  margin: 0 2rem;
+  border-radius: 50%;
+}
+
+fieldset {
+  margin: 0 2rem;
+  padding: 0 1rem;
+
+  border: var(--borda-padrao);
+  border-radius: var(--raio-borda-padrao);
+}
+
+p {
+  color: var(--cor-texto-destaque);
+}
+
+.obrigatorio {
+  color: var(--cor-entrada-destaque);
+}
+
+.sugestao {
+  color: var(--cor-texto-padrao);
+  font-size: medium;
+}
+
+/* ---------- Campos do Formulário ---------- */
+select,
+textarea,
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 3px;
+  padding: 0.75rem;
+
+  background-color: var(--cor-fundo-destaque);
+  color: var(--cor-texto-padrao);
+
+  border: var(--borda-padrao);
+  border-radius: var(--raio-borda-padrao);
+}
+
+/* ---------- #seletor-produtos ---------- */
+/* (Sem estilos específicos) */
+
+/* ---------- #classificacao ---------- */
+#estrelas {
+  display: flex;
+}
+
+#estrelas input[type="radio"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#estrelas label {
+  font-size: xx-large;
+}
+
+#estrelas label::before {
+  content: var(--estrela-padrao);
+}
+
+#estrelas label:hover,
+#estrelas label:has(~ label:hover)::before {
+  color: var(--cor-entrada-destaque);
+}
+
+#estrelas label:has(~ input:checked)::before {
+  content: var(--estrela-destaque);
+  color: var(--cor-entrada-destaque);
+}
+
+/* ---------- #entrada-data ---------- */
+/* (Sem estilos específicos) */
+
+/* ---------- #recursos ---------- */
+#recursos div label {
+  display: flex;
+  padding-top: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#recursos div p {
+  color: var(--cor-texto-padrao);
+}
+
+#recursos div p:hover {
+  color: var(--cor-entrada-destaque);
+}
+
+/* ---------- #entrada-avaliacao ---------- */
+/* (Sem estilos específicos) */
+
+/* ---------- #entrada-nome ---------- */
+/* (Sem estilos específicos) */
+
+/* ---------- Botão ---------- */
+button {
+  width: 96%;
+  max-width: 400px;
+  margin: 0 3rem;
+  padding: 0.6rem;
+
+  border: none;
+  border-radius: var(--raio-borda-padrao);
+
+  background-image: var(--gradiente-botão);
+
+  font-size: larger;
+  font-weight: bold;
+}
+
+button p {
+  color: var(--cor-fundo-destaque);
+}
+
+button:hover p {
+  text-shadow: var(--sombra-texto-botão);
+}
+
+/* ---------- Agradecimento ---------- */
+section {
+  max-width: 400px;
+}
+
+section.agradecimento h2 {
+  color: var(--cor-entrada-destaque);
+}
+
+section.agradecimento p {
+  color: var(--cor-texto-padrao);
+  text-indent: 3rem;
+}
+
+section.contador p {
+  color: var(--cor-texto-padrao);
+  text-align: center;
+}
+
+section.contador span#contador {
+  color: var(--cor-entrada-destaque);
+}
+
+button#voltar {
+  margin: 0;
+}

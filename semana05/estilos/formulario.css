@@ -28,7 +28,7 @@
 /* ---------- Estrutura Geral ---------- */
 body {
   font-family: monospace;
-  font-size: 1rem;
+  font-size: medium;
   font-weight: 400;
 
   color-scheme: dark;
@@ -152,8 +152,8 @@ input[type="checkbox"] {
 /* ---------- Botão ---------- */
 button {
   width: 96%;
-  max-width: 400px;
-  margin: 0 3rem;
+  max-width: 340px;
+  margin: 0 2rem;
   padding: 0.6rem;
 
   border: none;
@@ -198,4 +198,19 @@ section.contador span#contador {
 
 button#voltar {
   margin: 0;
+}
+
+@media (min-width: 550px) {
+  body {
+    font-size: larger;
+  }
+  
+  hr {
+    margin: 0 18vw;
+  }
+
+  button {
+    max-width: 400px;
+    margin: 0 2rem;
+  }
 }

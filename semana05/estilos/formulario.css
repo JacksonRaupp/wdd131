@@ -1,45 +1,58 @@
+/* =========================================================
+   RESET
+   ========================================================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  /* ---------- Principal ---------- */
-  --cor-fundo-padrao: #202121;
-  --cor-texto-padrao: #bbbebf;
-  --borda-padrao: 1px solid #dddddd5c;
-  --raio-borda-padrao: 6px;
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
 
-  /* ---------- Destaque ---------- */
+:root {
+  /* ---------- Cores ---------- */
+  --cor-fundo-padrao: #202121;
   --cor-fundo-destaque: #121314;
+
+  --cor-texto-padrao: #bbbebf;
   --cor-texto-destaque: #8cdcfe;
   --cor-entrada-destaque: #d7aa4a;
 
-  /* ---------- Classificação Geral ---------- */
+  /* ---------- Bordas ---------- */
+  --borda-padrao: 1px solid #dddddd5c;
+  --raio-borda-padrao: 6px;
+
+  /* ---------- Classificação ---------- */
   --estrela-padrao: "☆";
   --estrela-destaque: "★";
 
   /* ---------- Botão ---------- */
-  --gradiente-botão: linear-gradient(#8cdcfe, #248bdb);
-  --sombra-texto-botão: 0 0 10px #808080;
+  --gradiente-botao: linear-gradient(#8cdcfe, #248bdb);
+  --sombra-texto-botao: 0 0 10px #808080;
 }
 
-/* ---------- Estrutura Geral ---------- */
+/* =========================================================
+   ESTRUTURA GERAL
+   ========================================================= */
+
 body {
+  color-scheme: dark;
+
+  background-color: var(--cor-fundo-padrao);
+  color: var(--cor-texto-padrao);
+
   font-family: monospace;
   font-size: medium;
   font-weight: 400;
-
-  color-scheme: dark;
-  background-color: var(--cor-fundo-padrao);
-  color: var(--cor-texto-padrao);
 }
 
 header,
 footer {
-  text-align: center;
   color: var(--cor-texto-destaque);
+  text-align: center;
 }
 
 main {
@@ -47,9 +60,14 @@ main {
   justify-self: center;
 }
 
+form {
+  max-width: 390px;
+}
+
 hr {
-  border-color: var(--cor-fundo-destaque);
   margin: 0 2rem;
+
+  border-color: var(--cor-fundo-destaque);
   border-radius: 50%;
 }
 
@@ -61,7 +79,12 @@ fieldset {
   border-radius: var(--raio-borda-padrao);
 }
 
-p {
+/* =========================================================
+   TEXTOS
+   ========================================================= */
+
+p,
+.rotulo {
   color: var(--cor-texto-destaque);
 }
 
@@ -74,7 +97,10 @@ p {
   font-size: medium;
 }
 
-/* ---------- Campos do Formulário ---------- */
+/* =========================================================
+   CAMPOS DO FORMULÁRIO
+   ========================================================= */
+
 select,
 textarea,
 input[type="text"],
@@ -91,10 +117,10 @@ input[type="date"] {
   border-radius: var(--raio-borda-padrao);
 }
 
-/* ---------- #seletor-produtos ---------- */
-/* (Sem estilos específicos) */
+/* =========================================================
+   CLASSIFICAÇÃO
+   ========================================================= */
 
-/* ---------- #classificacao ---------- */
 #estrelas {
   display: flex;
 }
@@ -122,16 +148,16 @@ input[type="date"] {
   color: var(--cor-entrada-destaque);
 }
 
-/* ---------- #entrada-data ---------- */
-/* (Sem estilos específicos) */
+/* =========================================================
+   RECURSOS
+   ========================================================= */
 
-/* ---------- #recursos ---------- */
 #recursos div label {
   display: flex;
   padding-top: 10px;
 }
 
-input[type="checkbox"] {
+#recursos input[type="checkbox"] {
   margin-right: 10px;
 }
 
@@ -143,37 +169,35 @@ input[type="checkbox"] {
   color: var(--cor-entrada-destaque);
 }
 
-/* ---------- #entrada-avaliacao ---------- */
-/* (Sem estilos específicos) */
+/* =========================================================
+   BOTÃO
+   ========================================================= */
 
-/* ---------- #entrada-nome ---------- */
-/* (Sem estilos específicos) */
-
-/* ---------- Botão ---------- */
 button {
-  width: 96%;
-  max-width: 340px;
+  width: 84%;
   margin: 0 2rem;
   padding: 0.6rem;
 
+  align-self: center;
+
+  background-image: var(--gradiente-botao);
+  color: var(--cor-fundo-destaque);
+
   border: none;
   border-radius: var(--raio-borda-padrao);
-
-  background-image: var(--gradiente-botão);
 
   font-size: larger;
   font-weight: bold;
 }
 
-button p {
-  color: var(--cor-fundo-destaque);
+button:hover {
+  text-shadow: var(--sombra-texto-botao);
 }
 
-button:hover p {
-  text-shadow: var(--sombra-texto-botão);
-}
+/* =========================================================
+   AGRADECIMENTO
+   ========================================================= */
 
-/* ---------- Agradecimento ---------- */
 section {
   max-width: 400px;
 }
@@ -187,6 +211,10 @@ section.agradecimento p {
   text-indent: 3rem;
 }
 
+/* =========================================================
+   CONTADOR
+   ========================================================= */
+
 section.contador p {
   color: var(--cor-texto-padrao);
   text-align: center;
@@ -196,21 +224,12 @@ section.contador span#contador {
   color: var(--cor-entrada-destaque);
 }
 
-button#voltar {
-  margin: 0;
-}
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
 
-@media (min-width: 550px) {
+@media (min-width: 490px) {
   body {
     font-size: larger;
-  }
-  
-  hr {
-    margin: 0 18vw;
-  }
-
-  button {
-    max-width: 400px;
-    margin: 0 2rem;
   }
 }

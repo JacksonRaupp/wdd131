@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contato | IndSyto</title>
+    <meta name="author" content="Jackson Raupp" />
+    <meta
+      name="description"
+      content="Entre em contato com a IndSyto para conversar sobre sua solução de automação industrial."
+    />
+
+    <link rel="stylesheet" href="estilos/estilo-mobile.css" />
+    <link rel="stylesheet" href="estilos/estilo-desktop.css" />
+
+    <script src="scripts/script.js" defer></script>
+
+    <!-- ---------- IMPORTAÇÃO ---------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+
+    <!-- Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0"
+    />
+  </head>
+
+  <body>
+    <header>
+      <a
+        href="index.html"
+        id="logo"
+        aria-label="IndSyto - Automação Industrial"
+      >
+        <svg aria-hidden="true">
+          <use href="./icones/logo.svg"></use>
+        </svg>
+
+        <h1>IndSyto</h1>
+        <p>Automação Industrial</p>
+      </a>
+
+      <button
+        id="btn-hamburguer"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <span class="material-symbols-outlined" aria-hidden="true"></span>
+      </button>
+
+      <nav id="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html#sobre">Sobre</a></li>
+          <li><a href="index.html#solucoes">Soluções</a></li>
+          <li><a href="index.html#aplicacoes">Aplicações</a></li>
+          <li><a href="index.html#engenharia">Engenharia elétrica</a></li>
+        </ul>
+      </nav>
+
+      <a href="contato.html" id="btn-contato"> Vamos conversar </a>
+    </header>
+
+    <main>
+      <section id="contato" aria-labelledby="titulo-contato">
+        <header>
+          <div>
+            <span class="material-symbols-outlined" aria-hidden="true">
+              forum
+            </span>
+
+            <p>Contato</p>
+          </div>
+
+          <h2 id="titulo-contato">Vamos conversar sobre sua solução</h2>
+
+          <p>
+            Conte brevemente o que você precisa. Vamos entender sua aplicação e
+            avaliar como a IndSyto pode contribuir.
+          </p>
+
+          <br />
+        </header>
+
+        <form id="form-contato" action="envio.html" method="get">
+          <fieldset>
+            <legend>Seus dados</legend>
+
+            <div>
+              <label for="nome">Nome</label>
+
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                autocomplete="name"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="cidade">Cidade</label>
+
+              <input type="text" id="cidade" name="cidade" required />
+            </div>
+
+            <div>
+              <label for="uf">UF</label>
+
+              <select id="uf" name="uf" autocomplete="address-level1" required>
+                <option value="" selected disabled>Selecione</option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="necessidade">
+                Descrição da necessidade
+                <span>(opcional)</span>
+              </label>
+
+              <textarea
+                id="necessidade"
+                name="necessidade"
+                rows="6"
+                placeholder="Descreva brevemente o processo, equipamento ou necessidade."
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <button type="submit">
+            Continuar para o WhatsApp
+            <span class="material-symbols-outlined" aria-hidden="true">
+              arrow_forward
+            </span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&COPY; <span id="anoAtual"></span> IndSyto.</p>
+      <p>Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

@@ -1,51 +1,303 @@
+/* ==========================================================
+   DESKTOP
+   ========================================================== */
+
 @media (min-width: 45rem) {
-  header {
-    display: flex;
-    justify-content: space-between;
+  :root {
+    --espaco-lateral: 2rem;
   }
 
-  header #btn-hamburguer {
+  /* ========================================================
+     HEADER
+     ======================================================== */
+
+  body > header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  #btn-hamburguer {
     display: none;
   }
 
-  header #menu.expandir {
-    position: relative;
-    top: auto;
-  }
+  #menu,
+  #menu.expandir {
+    position: static;
 
-  header #menu {
     display: flex;
-    width: 100%;
-    justify-content: center;
+
+    width: auto;
+
+    background: transparent;
+    border: 0;
   }
 
-  header #menu ul {
-    width: 100%;
-    max-width: 700px;
+  #menu ul {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    gap: 0.2rem;
   }
 
-  header #menu ul li {
-    height: 44px;
+  #menu li {
+    border: 0;
   }
 
-  header #menu ul li a {
-    width: auto;
+  #menu li a {
+    min-height: 44px;
+
+    padding: 0.6rem 0.8rem;
+
+    border: 1px solid transparent;
+    border-radius: var(--raio);
   }
 
-  header #btn-orcamento {
-    display: block;
+  #menu li a:hover {
+    border-color: var(--cor-borda);
   }
+
+  #btn-contato {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 0.6rem 1rem;
+
+    background: transparent;
+    color: var(--cor-texto);
+
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio);
+
+    text-decoration: none;
+
+    transition:
+      background-color var(--transicao),
+      border-color var(--transicao),
+      color var(--transicao);
+  }
+
+  #btn-contato:hover {
+    background: var(--cor-superficie);
+    border-color: var(--cor-borda-hover);
+    color: var(--cor-destaque);
+  }
+
+  /* ========================================================
+     ESTRUTURA
+     ======================================================== */
+
+  main > section {
+    padding-block: 6rem;
+  }
+
+  main > section > header > h2,
+  main > section > h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+  }
+
+  /* ========================================================
+     HERO
+     ======================================================== */
+
+  #inicio {
+    min-height: 720px;
+  }
+
+  #hero {
+    min-height: 720px;
+  }
+
+  #inicio > div {
+    min-height: 720px;
+
+    padding-block: 5rem;
+  }
+
+  #titulo-inicio {
+    max-width: 900px;
+
+    font-size: clamp(3.8rem, 6vw, 6.2rem);
+  }
+
+  #inicio > div > p:nth-of-type(2) {
+    max-width: 650px;
+
+    font-size: 1rem;
+  }
+
+  /* ========================================================
+     SOBRE
+     ======================================================== */
+
+  #sobre {
+    grid-template-columns:
+      minmax(0, 0.8fr)
+      minmax(0, 1.2fr);
+
+    align-items: start;
+
+    gap: clamp(1rem, 5vw, 2rem);
+  }
+
+  #sobre > header {
+    grid-column: 1 / -1;
+  }
+
+  #sobre > p {
+    max-width: 100%;
+  }
+
+  #sobre > p:last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* ========================================================
+     SOLUÇÕES
+     ======================================================== */
+
+  #solucoes > div {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  #solucoes article {
+    min-height: 220px;
+
+    padding: 1.5rem;
+  }
+
+  /* ========================================================
+     APLICAÇÕES
+     ======================================================== */
+
+  #aplicacoes > div {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  #aplicacoes article {
+    min-height: 175px;
+
+    padding: 1.5rem;
+  }
+
+  /* ========================================================
+     ENGENHARIA
+     ======================================================== */
+
+  #engenharia {
+    padding-inline: var(--espaco-lateral);
+  }
+
+  #engenharia ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  #engenharia li {
+    min-height: 90px;
+
+    padding: 1rem;
+  }
+
+  /* ========================================================
+     CONTATO — INDEX
+     ======================================================== */
+
+  #contato:not(:has(#form-contato)) {
+    padding-block: 6rem;
+  }
+
+  #contato:not(:has(#form-contato)) > h2 {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+  }
+
+  /* ========================================================
+     CONTATO — FORMULÁRIO
+     ======================================================== */
+
+  #contato:has(#form-contato) {
+    min-height: calc(100vh - 168px);
+
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+  }
+
+  #titulo-contato {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+  }
+
+  #form-contato {
+    margin-top: 2.75rem;
+  }
+
+  #form-contato fieldset {
+    padding: 1.75rem;
+  }
+
+  #form-contato button[type="submit"] {
+    width: fit-content;
+    min-width: 260px;
+  }
+
+  /* ========================================================
+     ENVIO
+     ======================================================== */
+
+  #envio {
+    min-height: calc(100vh - 168px);
+
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+  }
+
+  #titulo-envio {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+  }
+
+  #envio > header > p,
+  #abrir-whatsapp > p {
+    font-size: 0.95rem;
+  }
+
+  #link-whatsapp {
+    min-width: 260px;
+  }
+
+  /* ========================================================
+     FOOTER
+     ======================================================== */
 
   footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-block: 1rem;
+  }
+}
+
+/* ==========================================================
+   TELAS GRANDES
+   ========================================================== */
+
+@media (min-width: 75rem) {
+  :root {
+    --espaco-lateral: 3rem;
   }
 
-  footer p {
-    padding: 0 5px;
+  body > header {
+    min-height: 88px;
+  }
+
+  #logo svg {
+    width: 72px;
+    height: 72px;
+  }
+
+  #inicio,
+  #hero,
+  #inicio > div {
+    min-height: 760px;
   }
 }

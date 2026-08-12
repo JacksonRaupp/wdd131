@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>IndSyto</title>
+    <title>IndSyto | Automação Industrial</title>
     <meta name="author" content="Jackson Raupp" />
-    <meta name="description" content="" />
+    <meta
+      name="description"
+      content="Automação industrial para armazéns, beneficiamento de arroz e aplicações agroindustriais."
+    />
 
     <link rel="stylesheet" href="estilos/estilo-mobile.css" />
     <link rel="stylesheet" href="estilos/estilo-desktop.css" />
@@ -14,7 +17,6 @@
     <script src="scripts/script.js" defer></script>
 
     <!-- ---------- IMPORTAÇÃO ---------- -->
-    <!-- Pré Conexão -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -24,17 +26,21 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
 
-    <!-- Icones -->
+    <!-- Material Symbols -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menuclose"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0"
     />
   </head>
 
   <body>
     <header>
-      <a href="index.html" id="logo">
-        <svg aria-label="Logomarca IndSyto">
+      <a
+        href="index.html"
+        id="logo"
+        aria-label="IndSyto - Automação Industrial"
+      >
+        <svg aria-hidden="true">
           <use href="./icones/logo.svg"></use>
         </svg>
 
@@ -42,24 +48,255 @@
         <p>Automação Industrial</p>
       </a>
 
-      <button id="btn-hamburguer"></button>
+      <button
+        id="btn-hamburguer"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-controls="menu"
+        aria-expanded="false"
+      >
+        <span class="material-symbols-outlined" aria-hidden="true"></span>
+      </button>
 
-      <nav id="menu">
+      <nav id="menu" aria-label="Navegação principal">
         <ul>
-          <li><a href="">Serviços</a></li>
-          <li><a href="">Sobre</a></li>
-          <li><a href="">Projetos</a></li>
-          <li><a href="">Contato</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#aplicacoes">Aplicações</a></li>
+          <li><a href="#engenharia">Engenharia elétrica</a></li>
         </ul>
       </nav>
 
-      <button id="btn-orcamento">Solicitar Orçamento</button>
+      <a href="contato.html" id="btn-contato"> Vamos conversar </a>
     </header>
 
-    <main></main>
+    <main>
+      <!-- ==================== HERO ==================== -->
+      <section id="inicio" aria-labelledby="titulo-inicio">
+        <picture>
+          <source
+            srcset="imagens/hero-desktop.webp"
+            media="(min-width: 800px)"
+          />
+          <source
+            srcset="imagens/hero-tablet.webp"
+            media="(min-width: 400px)"
+          />
+          <img
+            id="hero"
+            src="imagens/hero-mobile.webp"
+            alt="Automação industrial para o agronegócio"
+            loading="lazy"
+          />
+        </picture>
+
+        <div>
+          <p>IndSyto • Automação Industrial</p>
+
+          <h2 id="titulo-inicio">Automação industrial para o agronegócio</h2>
+
+          <p>
+            Soluções para armazéns, beneficiamento de arroz e outras aplicações
+            agroindustriais.
+          </p>
+
+          <a href="contato.html" id="cta-hero">
+            Vamos conversar
+            <span class="material-symbols-outlined" aria-hidden="true">
+              arrow_forward
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ==================== SOBRE ==================== -->
+      <section id="sobre" aria-labelledby="titulo-sobre">
+        <header>
+          <p>Sobre a IndSyto</p>
+
+          <h2 id="titulo-sobre">
+            Automação industrial aplicada ao agronegócio
+          </h2>
+        </header>
+
+        <p>
+          Desenvolvemos soluções de automação para processos e equipamentos
+          utilizados no agronegócio e em instalações agroindustriais.
+        </p>
+
+        <p>
+          A automação contribui para melhorar o controle dos processos, reduzir
+          intervenções manuais e facilitar o acompanhamento da operação.
+        </p>
+
+        <p>Experiência em automação industrial desde 2012.</p>
+      </section>
+
+      <!-- ==================== SOLUÇÕES ==================== -->
+      <section id="solucoes" aria-labelledby="titulo-solucoes">
+        <header>
+          <p>Soluções</p>
+
+          <h2 id="titulo-solucoes">Automação, interface e modernização</h2>
+        </header>
+
+        <div>
+          <article>
+            <h3>Automação</h3>
+
+            <p>Controle de motores, CLP e fluxo de processo.</p>
+          </article>
+
+          <article>
+            <h3>Interface</h3>
+
+            <p>IHM, supervisório e Web Server.</p>
+          </article>
+
+          <article>
+            <h3>Retrofit</h3>
+
+            <p>
+              Planejamento, projeto e diagramas para modernização de sistemas
+              existentes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================== APLICAÇÕES ==================== -->
+      <section id="aplicacoes" aria-labelledby="titulo-aplicacoes">
+        <header>
+          <p>Aplicações</p>
+
+          <h2 id="titulo-aplicacoes">
+            Soluções para diferentes aplicações agroindustriais
+          </h2>
+        </header>
+
+        <div>
+          <article>
+            <h3>Armazéns de grãos</h3>
+
+            <p>Automação e controle de processos de armazenagem.</p>
+          </article>
+
+          <article>
+            <h3>Beneficiamento de arroz</h3>
+
+            <p>Automação aplicada aos processos de beneficiamento.</p>
+          </article>
+
+          <article>
+            <h3>Algodoeira / extração de óleo</h3>
+
+            <p>Automação para processos e equipamentos agroindustriais.</p>
+          </article>
+
+          <article>
+            <h3>Outras implementações</h3>
+
+            <p>Soluções conforme a necessidade de cada instalação.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==================== ENGENHARIA ELÉTRICA ==================== -->
+      <section id="engenharia" aria-labelledby="titulo-engenharia">
+        <header>
+          <div>
+            <p>Parceiros especializados</p>
+
+            <h2 id="titulo-engenharia">
+              Engenharia elétrica através de parceiros
+            </h2>
+          </div>
+        </header>
+
+        <p>
+          Para complementar a solução, a IndSyto pode integrar parceiros
+          especializados em engenharia elétrica.
+        </p>
+
+        <ul>
+          <li>
+            <span class="material-symbols-outlined" aria-hidden="true">
+              tools_power_drill
+            </span>
+            <span>Criação e montagem de quadros de comando</span>
+          </li>
+
+          <li>
+            <span class="material-symbols-outlined" aria-hidden="true">
+              cable
+            </span>
+            <span>Infraestrutura elétrica</span>
+          </li>
+
+          <li>
+            <span class="material-symbols-outlined" aria-hidden="true">
+              calculate
+            </span>
+            <span>Dimensionamento de cargas</span>
+          </li>
+
+          <li>
+            <span class="material-symbols-outlined" aria-hidden="true">
+              power
+            </span>
+            <span>Instalações elétricas</span>
+          </li>
+
+          <li>
+            <span class="material-symbols-outlined" aria-hidden="true">
+              add_home
+            </span>
+            <span>Novas instalações</span>
+          </li>
+
+          <li>
+            <span class="material-symbols-outlined" aria-hidden="true">
+              upgrade
+            </span>
+            <span>Modernização de sistemas existentes</span>
+          </li>
+        </ul>
+
+        <p>
+          <small>
+            Os serviços de engenharia elétrica são realizados através de
+            parceiros especializados.
+          </small>
+        </p>
+      </section>
+
+      <!-- ==================== CTA FINAL ==================== -->
+      <section id="contato" aria-labelledby="titulo-contato">
+        <span class="material-symbols-outlined" aria-hidden="true">
+          forum
+        </span>
+
+        <p>Contato</p>
+
+        <h2 id="titulo-contato">Vamos conversar sobre seu projeto</h2>
+
+        <p>
+          Apresente sua necessidade. Vamos entender sua aplicação e avaliar a
+          solução adequada.
+        </p>
+
+        <a href="contato.html" id="cta-contato">
+          Vamos conversar
+          <span class="material-symbols-outlined" aria-hidden="true">
+            arrow_forward
+          </span>
+        </a>
+      </section>
+    </main>
 
     <footer>
       <p>&COPY; <span id="anoAtual"></span> IndSyto.</p>
+
       <p>Todos os direitos reservados.</p>
     </footer>
   </body>
